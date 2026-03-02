@@ -2,7 +2,7 @@
 
 **Spend less time on admin. More time on care.**
 
-Juno is a field-first tool for midwives and community care teams. It supports **scheduling**, **route planning**, and **clear communication**—so you spend less time coordinating and more time delivering care.
+Juno is a field-first tool for midwives and community care teams. It supports **scheduling**, **route planning**, and **clear communication**, so you spend less time coordinating and more time delivering care.
 
 ## Website
 - https://getjuno.de
