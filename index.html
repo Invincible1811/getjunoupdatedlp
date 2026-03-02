@@ -3,325 +3,425 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juno - Administrative Software for Midwives | Reduce Admin Workload</title>
+  <title>Juno - Administrative Software for Midwives</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <!-- ✅ LOGO: replace src with your actual file path -->
-      <a class="logo-link" href="#top" aria-label="Juno Home">
-        <img class="logo-image" src="assets/juno-logo.svg" alt="Juno logo" />
-      </a>
 
-      <div class="nav-links">
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Juno Home">
+        <span class="nav__brand">
+          <span class="nav__letter nav__letter--j">J</span><span class="nav__letter nav__letter--u">U</span><span class="nav__letter nav__letter--n">N</span><span class="nav__letter nav__letter--o">O</span>
+        </span>
+      </a>
+      <div class="nav__menu">
         <a href="#about">About</a>
         <a href="#features">Features</a>
-        <button class="nav-cta" type="button" data-scroll="#waitlist">Get Early Access</button>
+        <a href="#team">Team</a>
+        <a href="#waitlist" class="nav__btn" data-scroll="#waitlist">Get Early Access</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO — Full-width image banner -->
   <section class="hero" id="top">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-top-text">Built for Midwives</div>
-        <h1 class="hero-title">
-          Spend Less Time on Admin.<br>
-          <span class="text-highlight">More Time on Care.</span>
-        </h1>
-        <p class="hero-description">
-          Juno is the administrative software designed by midwives, for midwives. Automate the paperwork, streamline your schedule, and focus on what matters most—your clients.
-        </p>
+    <div class="hero__banner">
+      <img src="assets/Background Images/Bimg1.png?v=2" alt="Mother caring for newborn" class="hero__img" />
+      <div class="hero__overlay"></div>
 
-        <!-- ✅ HERO CTA: email form removed (per your request).
-             Simple button that scrolls to the waitlist section. -->
-        <div class="hero-actions">
-          <button class="cta-button" type="button" data-scroll="#waitlist">Join the Waitlist</button>
-          <p class="waitlist-text">Early access is limited. No spam — ever.</p>
-        </div>
+      <!-- Floating decorative shapes -->
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+
+      <div class="hero__content">
+        <span class="pill hero__anim" style="--delay:.2s">Built for Midwives</span>
+        <h1 class="hero__anim" style="--delay:.4s">Spend less time on admin.<br><em>More time on care.</em></h1>
+        <p class="hero__anim" style="--delay:.6s">Juno is the administrative software designed by midwives, for midwives. Automate paperwork, streamline your schedule, and focus on what matters most.</p>
       </div>
     </div>
+    <!-- Wave: Hero → About -->
+    <svg class="wave wave--hero" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C360,120 720,20 1440,80 L1440,120 L0,120 Z" />
+    </svg>
   </section>
 
-  
-  
-  
-  <!-- About Section -->
+  <!-- ABOUT — Full background image -->
   <section class="about" id="about">
-    <div class="container">
-      <div class="about-content">
-        <h2 class="about-title">Built for Real Midwifery Work</h2>
-        <p class="about-description">
-          Juno is designed for real midwifery work, not desk work. It goes with you from home visits to the birth centre to the in-between moments on the road, keeping everything in one place so your practice stays organised, compliant, and personal.
-        </p>
-
-        <div class="about-features">
-          <div class="about-feature">
-            <div class="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <path d="M9 12l2 2 4-4"></path>
-              </svg>
-            </div>
-            <h3>Privacy-first by design</h3>
+    <div class="about__overlay"></div>
+    <div class="wrap about__body reveal">
+      <span class="pill pill--sage">Why Juno?</span>
+      <h2>Built for real midwifery work</h2>
+      <p class="about__desc">Juno goes with you from home visits to the birth centre to the in-between moments on the road — keeping everything in one place so your practice stays organised, compliant, and personal.</p>
+      <div class="about__divider"></div>
+      <div class="about__points">
+        <div class="point">
+          <div class="point__icon point__icon--rose">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <strong>Privacy-first by design</strong>
             <p>Built to protect sensitive health information with strong data safeguards.</p>
           </div>
-
-          <div class="about-feature">
-            <div class="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12,6 12,12 16,14"></polyline>
-              </svg>
-            </div>
-            <h3>Save time on admin</h3>
-            <p>Spend less time chasing calls, repeating details, and doing paperwork, so you can focus on care.</p>
+        </div>
+        <div class="point">
+          <div class="point__icon point__icon--sage">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
           </div>
-
-          <div class="about-feature">
-            <div class="about-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-            </div>
-            <h3>Support better outcomes</h3>
-            <p>Keep an eye on symptom logs and client trends to act early and stay proactive.</p>
+          <div>
+            <strong>Save hours every week</strong>
+            <p>Spend less time chasing calls, repeating details, and doing paperwork.</p>
+          </div>
+        </div>
+        <div class="point">
+          <div class="point__icon point__icon--gold">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <strong>Support better outcomes</strong>
+            <p>Keep an eye on symptom logs and client trends to act early.</p>
           </div>
         </div>
       </div>
     </div>
+    <!-- Wave: About → Features -->
+    <svg class="wave wave--about" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,40 C480,120 960,0 1440,60 L1440,120 L0,120 Z" />
+    </svg>
   </section>
 
-  
-  <!-- Features Section -->
+  <!-- FEATURES -->
   <section class="features" id="features">
-    <div class="container">
-      <div class="features-header">
-        <h2 class="features-title">Everything You Need, Nothing You Don't</h2>
-        <p class="features-subtitle">Powerful tools designed around how midwives actually work.</p>
+    <img src="assets/Background Images/Bimg7.png" alt="" class="features__bg" />
+    <div class="features__overlay"></div>
+    <div class="wrap features__wrap">
+      <div class="section-head reveal features__head">
+        <span class="pill pill--glow">Features</span>
+        <h2>Everything you need, nothing you don't</h2>
+        <p>Powerful tools designed around how midwives actually work.</p>
       </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-          </div>
+      <!-- Featured hero card -->
+      <div class="feat-hero reveal">
+        <div class="feat-hero__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="feat-hero__body">
           <h3>Your Optimized Calendar</h3>
-          <p>Managing home visits, clinic hours, and birth windows is a logistical puzzle. Juno solves it automatically.</p>
+          <p>Managing home visits, clinic hours, and birth windows is a logistical puzzle. Juno solves it automatically — giving you more time for what matters.</p>
         </div>
+      </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
+      <!-- Card grid -->
+      <div class="feat-grid">
+        <div class="feat-card reveal" style="--card-delay:.1s">
+          <div class="feat-card__icon feat-card__icon--sage">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </div>
-          <h3>Seamless Communication</h3>
-          <p>Connect without the burnout. Midwifery is personal, but your private life is precious. Juno centralizes all your patient interactions into one professional hub.</p>
+          <h4>Seamless Communication</h4>
+          <p>Centralise patient interactions into one professional hub. Stay connected without the burnout.</p>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 20h9"></path>
-              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-            </svg>
+        <div class="feat-card reveal" style="--card-delay:.2s">
+          <div class="feat-card__icon feat-card__icon--gold">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <h3>Digital Diary</h3>
-          <p>A holistic view of every journey. Every pregnancy is a story. Juno's digital profile gives you a 360-degree view of the mother's health and progress.</p>
+          <h4>Digital Diary</h4>
+          <p>Every pregnancy is a story. Get a 360-degree view of the mother's health and progress.</p>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
-            </svg>
+        <div class="feat-card reveal" style="--card-delay:.3s">
+          <div class="feat-card__icon feat-card__icon--teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
           </div>
-          <h3>Optimize Your Home Visit Routes</h3>
-          <p>Juno plans appointments by location to minimize your travel time.</p>
+          <h4>Route Planning</h4>
+          <p>Juno plans appointments by location to minimise your travel time.</p>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 3v18h18"></path>
-              <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
-            </svg>
+        <div class="feat-card reveal" style="--card-delay:.4s">
+          <div class="feat-card__icon feat-card__icon--lavender">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
           </div>
-          <h3>Your Practice at a Glance</h3>
-          <p>Track your visits and patient capacity in real-time to manage your workload without the stress. See your projected revenue and billing status at a glance, replacing messy spreadsheets with instant financial clarity.</p>
+          <h4>Practice at a Glance</h4>
+          <p>Track visits, capacity, revenue, and billing in real-time — replacing spreadsheets with clarity.</p>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-              <line x1="9" y1="9" x2="9.01" y2="9"></line>
-              <line x1="15" y1="9" x2="15.01" y2="9"></line>
-            </svg>
+        <div class="feat-card feat-card--accent reveal" style="--card-delay:.5s">
+          <div class="feat-card__icon feat-card__icon--rose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
           </div>
-          <h3>The Midwife Circle</h3>
-          <p>Connect with a community of peers to share clinical experiences, solve common practice hurdles, and discuss industry trends. Gain valuable insights from collective wisdom and navigate the challenges of independent midwifery alongside a supportive professional network.</p>
+          <h4>The Midwife Circle</h4>
+          <p>Connect with peers to share clinical experiences and navigate challenges together.</p>
         </div>
       </div>
     </div>
+    <!-- Wave: Features → Break -->
+    <svg class="wave wave--features" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,60 C320,100 640,20 960,60 C1120,80 1280,40 1440,50 L1440,100 L0,100 Z" />
+    </svg>
   </section>
 
-  
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="testimonials-header">
-        <h2 class="testimonials-title">Hear from Your Colleagues</h2>
-        <p class="testimonials-subtitle">TRUSTED BY MIDWIVES</p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"By Sunday evening, I am always stressed, trying to map out my whole week and still missing things. I need planning to be faster and more reliable. I hope Juno helps me organize my week in seconds, so that I actually get my weekends back."</p>
-            <div class="testimonial-author">
-              <div class="author-name">Sarah M.</div>
-              <div class="author-role">Independent Midwife, Berlin-Prenzlauer Berg</div>
-            </div>
-          </div>
+  <!-- STATS DIVIDER -->
+  <section class="stats reveal">
+    <div class="wrap">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__number">4+</span>
+          <span class="stats__label">Hours saved weekly</span>
         </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"I lose hours every week figuring out routes and reorganizing visits when plans change. I need something that cuts the back-and-forth. I hope Juno's route planning saves me about 4 hours a week, which I can put back into client care—or rest."</p>
-            <div class="testimonial-author">
-              <div class="author-name">Emma K.</div>
-              <div class="author-role">Community Midwife, Berlin-Neukölln</div>
-            </div>
-          </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number">100%</span>
+          <span class="stats__label">Privacy compliant</span>
         </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"Secure messaging is a real gap for us—too many tools, too much risk, and communication still feels messy all week. I need one place that is safe and professional without feeling cold. I am optimistic Juno can help clients message securely and still feel personal."</p>
-            <div class="testimonial-author">
-              <div class="author-name">Priya D.</div>
-              <div class="author-role">Birth Centre Lead, Berlin-Mitte</div>
-            </div>
-          </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number">1</span>
+          <span class="stats__label">Platform for everything</span>
         </div>
       </div>
     </div>
+    <!-- Wave: Stats → Team -->
+    <svg class="wave wave--stats" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,50 C360,90 720,10 1080,50 C1260,70 1380,40 1440,55 L1440,100 L0,100 Z" />
+    </svg>
   </section>
 
-  
-  <!-- Waitlist / Early Access Section -->
-  <section class="waitlist" id="waitlist">
-    <div class="waitlist-container">
-      <div class="waitlist-header">
-        <div class="waitlist-kicker">EARLY ACCESS</div>
-        <h2 class="waitlist-title">Be First to Transform Your Practice</h2>
-        <p class="waitlist-subtitle">Join our waitlist and be among the first midwives to reclaim your time.</p>
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <img class="team__bgimg" src="assets/Background Images/Bimg8.png" alt="" aria-hidden="true"/>
+    <div class="team__overlay"></div>
+    <div class="wrap">
+      <div class="team__header reveal">
+        <span class="team__label">Our Team</span>
+        <h2 class="team__heading">Meet the Minds Behind Juno</h2>
+        <p class="team__subtitle">Passionate professionals dedicated to transforming midwifery care</p>
       </div>
 
-      <form class="waitlist-form" autocomplete="on">
-        <div class="field">
-          <label for="fullName">Full Name</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Jane Smith" required />
+      <!-- Row 1: Leadership -->
+      <div class="team__row reveal">
+        <div class="team__card" style="--delay:0s">
+          <div class="team__circle">
+            <img src="assets/team/Jannik Fuchs.png" alt="Jannik Fuchs" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">JF</div>
+          </div>
+          <h3 class="team__name">Jannik Fuchs</h3>
+          <p class="team__role">Product Owner</p>
+          <div class="team__line"></div>
         </div>
-
-        <div class="field">
-          <label for="email">Email Address</label>
-          <input id="email" name="email" type="email" placeholder="jane@practice.com" required />
+        <div class="team__card" style="--delay:.1s">
+          <div class="team__circle">
+            <img src="assets/team/Sandra Mavunga.png" alt="Sandra Mavunga" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">SM</div>
+          </div>
+          <h3 class="team__name">Sandra Mavunga</h3>
+          <p class="team__role">Scrum Master</p>
+          <div class="team__line"></div>
         </div>
-
-        <div class="field">
-          <label for="location">Practice Location</label>
-          <input id="location" name="location" type="text" placeholder="Berlin-Neukölln" />
+        <div class="team__card" style="--delay:.2s">
+          <div class="team__circle">
+            <img src="assets/team/Bernard Barnieh.jpeg" alt="Bernard Barnieh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">BB</div>
+          </div>
+          <h3 class="team__name">Bernard Barnieh</h3>
+          <p class="team__role">Developer</p>
+          <div class="team__line"></div>
         </div>
+      </div>
 
-        <button class="waitlist-submit" type="submit">Join the Waitlist</button>
-
-        <div class="waitlist-privacy" role="note" aria-label="Privacy note">
-          <span class="lock" aria-hidden="true">🔒</span>
-          <span>Your data is safe. We never share your information with third parties.</span>
+      <!-- Row 2: Developers -->
+      <div class="team__row reveal">
+        <div class="team__card" style="--delay:.3s">
+          <div class="team__circle">
+            <img src="assets/team/Julian Bartsch.png" alt="Julian Bartsch" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">JB</div>
+          </div>
+          <h3 class="team__name">Julian Bartsch</h3>
+          <p class="team__role">Developer</p>
+          <div class="team__line"></div>
         </div>
-
-        <!-- optional: small success/error area (JS below uses it) -->
-        <p class="waitlist-msg" aria-live="polite"></p>
-      </form>
+        <div class="team__card" style="--delay:.4s">
+          <div class="team__circle">
+            <img src="assets/team/Can Cocyigit .png" alt="Can Kocyigit" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">CK</div>
+          </div>
+          <h3 class="team__name">Can Kocyigit</h3>
+          <p class="team__role">Developer</p>
+          <div class="team__line"></div>
+        </div>
+        <div class="team__card" style="--delay:.5s">
+          <div class="team__circle">
+            <img src="assets/team/Anna Holtkamp.png" alt="Anna Holtkamp" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">AH</div>
+          </div>
+          <h3 class="team__name">Anna Holtkamp</h3>
+          <p class="team__role">Developer</p>
+          <div class="team__line"></div>
+        </div>
+        <div class="team__card" style="--delay:.6s">
+          <div class="team__circle">
+            <img src="assets/team/Tarek Bder.png" alt="Tarek Bder" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="team__init" style="display:none">TB</div>
+          </div>
+          <h3 class="team__name">Tarek Bder</h3>
+          <p class="team__role">Developer</p>
+          <div class="team__line"></div>
+        </div>
+      </div>
     </div>
+    <!-- Wave: Team → Quotes -->
+    <svg class="wave wave--team" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,50 C240,100 480,20 720,50 C960,80 1200,30 1440,60 L1440,100 L0,100 Z" />
+    </svg>
   </section>
 
-  <!-- Footer -->
+  <!-- TESTIMONIALS -->
+  <section class="quotes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="pill pill--gold">Trusted by Midwives</span>
+        <h2>Hear from your colleagues</h2>
+      </div>
+      <div class="quotes__grid">
+        <blockquote class="quotes__card quotes__card--rose reveal" style="--delay:0s">
+          <div class="quotes__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <div class="quotes__sparkles"></div>
+          <p>"By Sunday evening, I am always stressed, trying to map out my whole week and still missing things. I hope Juno helps me organize my week in seconds, so that I actually get my weekends back."</p>
+          <footer>
+            <div class="quotes__avatar">SM</div>
+            <div class="quotes__author">
+              <strong>Sarah M.</strong>
+              <span>Independent Midwife, Berlin-Prenzlauer Berg</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="quotes__card quotes__card--teal reveal" style="--delay:.15s">
+          <div class="quotes__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <div class="quotes__sparkles"></div>
+          <p>"I lose hours every week figuring out routes and reorganizing visits when plans change. I hope Juno's route planning saves me about 4 hours a week."</p>
+          <footer>
+            <div class="quotes__avatar">EK</div>
+            <div class="quotes__author">
+              <strong>Emma K.</strong>
+              <span>Community Midwife, Berlin-Neukölln</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="quotes__card quotes__card--lavender reveal" style="--delay:.3s">
+          <div class="quotes__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <div class="quotes__sparkles"></div>
+          <p>"Secure messaging is a real gap for us. I need one place that is safe and professional without feeling cold. I am optimistic Juno can help clients message securely and still feel personal."</p>
+          <footer>
+            <div class="quotes__avatar">PD</div>
+            <div class="quotes__author">
+              <strong>Priya D.</strong>
+              <span>Birth Centre Lead, Berlin-Mitte</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <!-- Wave: Quotes → CTA -->
+    <svg class="wave wave--quotes" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,70 C360,20 720,100 1080,40 C1260,20 1380,50 1440,40 L1440,100 L0,100 Z" />
+    </svg>
+  </section>
+
+  <!-- WAITLIST / CTA -->
+  <section class="cta" id="waitlist">
+    <div class="wrap">
+      <div class="cta__inner reveal">
+        <div class="cta__left">
+          <span class="pill">Early Access</span>
+          <h2>Be first to transform your practice</h2>
+          <p>Join our WhatsApp community or leave your details and we'll reach out.</p>
+
+          <div class="cta__wa">
+            <div class="cta__wa-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.024 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <div>
+              <strong>Join the WhatsApp group</strong>
+              <p>Get early updates and connect with the team.</p>
+            </div>
+            <a href="https://chat.whatsapp.com/GoZ2ArMvciN26RgTINAEIT" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">Join</a>
+          </div>
+          <div class="cta__qr">
+            <img src="assets/whatsapp-qr.jpeg" alt="QR code" />
+            <span>Scan to join</span>
+          </div>
+        </div>
+
+        <div class="cta__right">
+          <h3>Or leave your details</h3>
+          <form class="form" action="https://formsubmit.co/jannik.fuchs@code.berlin" method="POST" autocomplete="on">
+            <input type="hidden" name="_subject" value="New Juno Waitlist Signup" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://getjuno.de" />
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Jane Smith" required />
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="jane@practice.com" required />
+            <label for="location">Practice Location</label>
+            <input id="location" name="location" type="text" placeholder="Berlin-Neukölln" />
+            <button class="btn btn--primary btn--full" type="submit">Send My Details</button>
+            <p class="form__note">🔒 Your data is safe. We never share your information.</p>
+            <p class="form__msg" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Wave: CTA → Footer -->
+    <svg class="wave wave--cta" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,30 C480,80 960,10 1440,40 L1440,80 L0,80 Z" />
+    </svg>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- ✅ LOGO in footer too -->
-        <a class="logo-link" href="#top" aria-label="Juno Home">
-          <img class="logo-image footer-logo-image" src="assets/juno-logo.svg" alt="Juno logo" />
+    <div class="footer__glow"></div>
+    <div class="wrap">
+      <div class="footer__top">
+        <a href="#top" class="footer__brand" aria-label="Home">
+          <span class="footer__logo">
+            <span class="footer__letter footer__letter--j">J</span><span class="footer__letter footer__letter--u">U</span><span class="footer__letter footer__letter--n">N</span><span class="footer__letter footer__letter--o">O</span>
+          </span>
+          <span class="footer__tagline">Midwifery, modernized.</span>
         </a>
-
-        <div class="footer-links">
-          <a href="#features">Features</a>
-          <a href="#waitlist">Waitlist</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.024 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
+        <nav class="footer__nav">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Navigate</h4>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#team">Team</a>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Get Started</h4>
+            <a href="#waitlist">Join Waitlist</a>
+            <a href="#quotes">Testimonials</a>
+            <a href="#stats">Our Impact</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Juno. All rights reserved.</p>
+      <div class="footer__divider"></div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Juno. All rights reserved.</p>
+        <p class="footer__made">Made with <span class="footer__heart">&hearts;</span> for midwives everywhere</p>
       </div>
     </div>
   </footer>
 
-  <!-- ✅ Tiny JS: smooth scroll + demo form behavior -->
-  <script>
-    // Smooth scroll for any element with data-scroll="#id"
-    document.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-scroll]');
-      if (!btn) return;
-      const target = document.querySelector(btn.getAttribute('data-scroll'));
-      if (!target) return;
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    // Demo submit handler (replace with your backend later)
-    const form = document.querySelector('.waitlist-form');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const msg = form.querySelector('.waitlist-msg');
-        if (msg) {
-          msg.textContent = "✅ You're on the waitlist! We'll be in touch soon.";
-        }
-        form.reset();
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
