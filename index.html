@@ -18,10 +18,15 @@
         </span>
       </a>
       <div class="nav__menu">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#team">Team</a>
-        <a href="#waitlist" class="nav__btn" data-scroll="#waitlist">Get Early Access</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#features" class="nav__link">Features</a>
+        <a href="#team" class="nav__link">Team</a>
+        <a href="#shape" class="nav__btn" data-scroll="#shape">Call to Action</a>
+        <button class="nav__lang" id="langToggle" aria-label="Switch language">
+          <span class="nav__lang-option nav__lang-option--active" data-lang="en">EN</span>
+          <span class="nav__lang-divider">|</span>
+          <span class="nav__lang-option" data-lang="de">DE</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -37,10 +42,19 @@
       <div class="hero__blob hero__blob--2"></div>
       <div class="hero__blob hero__blob--3"></div>
 
-      <div class="hero__content">
-        <span class="pill hero__anim" style="--delay:.2s">Built for Midwives</span>
-        <h1 class="hero__anim" style="--delay:.4s">Spend less time on admin.<br><em>More time on care.</em></h1>
-        <p class="hero__anim" style="--delay:.6s">Juno is the administrative software designed by midwives, for midwives. Automate paperwork, streamline your schedule, and focus on what matters most.</p>
+      <div class="hero__content hero__content--scattered">
+        <!-- Floating scattered phrases -->
+        <span class="hero__float hero__float--1">Rückfragen zwischen Hausbesuchen</span>
+        <span class="hero__float hero__float--2">Neue Anfragen am Abend</span>
+        <span class="hero__float hero__float--3">Kurzfristige Änderungen im Tagesplan</span>
+        <span class="hero__float hero__float--4">Nächste Woche koordinieren</span>
+        <span class="hero__float hero__float--5">Umplanungen am Wochenende</span>
+
+        <!-- Main heading -->
+        <h1 class="hero__main-heading">Und, wenn Dich jemand dabei<br>unterstützen könnte?</h1>
+
+        <!-- Bottom statement -->
+        <p class="hero__statement"><strong class="hero__juno-text">JUNO</strong> ist Deine intelligente Assistenz, gemeinsam entwickelt und abgestimmt auf Deinen Betreuungsalltag.</p>
       </div>
     </div>
     <!-- Wave: Hero → About -->
@@ -55,7 +69,14 @@
     <div class="wrap about__body reveal">
       <span class="pill pill--sage">Why Juno?</span>
       <h2>Built for real midwifery work</h2>
-      <p class="about__desc">Juno goes with you from home visits to the birth centre to the in-between moments on the road — keeping everything in one place so your practice stays organised, compliant, and personal.</p>
+      <div class="about__quote">
+        <div class="about__avatar">
+          <img src="assets/team/Anna Holtkamp.png" alt="Anna Holtkamp" />
+          <span class="about__avatar-name">Anna Holtkamp</span>
+          <span class="about__avatar-role">Head of Research</span>
+        </div>
+        <blockquote class="about__desc">"Built for the way you work. Juno isn't an 'office' tool, it's a 'field' tool. Whether you are in a living room, a birth center, or on the road, Juno keeps your practice organized, compliant, and human."</blockquote>
+      </div>
       <div class="about__divider"></div>
       <div class="about__points">
         <div class="point">
@@ -101,7 +122,7 @@
       <div class="section-head reveal features__head">
         <span class="pill pill--glow">Features</span>
         <h2>Everything you need, nothing you don't</h2>
-        <p>Powerful tools designed around how midwives actually work.</p>
+        <p>These are some unique features <strong class="hero__juno-text">JUNO</strong> app offers you.</p>
       </div>
 
       <!-- Featured hero card -->
@@ -158,6 +179,64 @@
     <svg class="wave wave--features" viewBox="0 0 1440 100" preserveAspectRatio="none">
       <path d="M0,60 C320,100 640,20 960,60 C1120,80 1280,40 1440,50 L1440,100 L0,100 Z" />
     </svg>
+  </section>
+
+  <!-- SHAPE THE FUTURE — Volunteer Tiers -->
+  <section class="shape" id="shape">
+    <div class="wrap">
+      <div class="shape__header reveal">
+        <span class="shape__badge">Call to Action</span>
+        <h2 class="shape__heading">Shape the Future of <strong class="hero__juno-text">JUNO</strong></h2>
+        <p class="shape__text">We are looking for insightful midwives to help us refine Juno. Join our research phase and ensure the tool is built for your real-world needs.</p>
+      </div>
+
+      <div class="shape__tiers">
+        <!-- Tier 1: The Strategists -->
+        <div class="shape__tier shape__tier--strategist reveal">
+          <div class="shape__tier-badge">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3 class="shape__tier-title">The Strategists</h3>
+          <p class="shape__tier-for">For the Visionaries</p>
+          <p class="shape__tier-desc">Join an exclusive circle of midwives providing deep-dive feedback on features, ethics, and workflow.</p>
+          <div class="shape__tier-section">
+            <h4>Commitment</h4>
+            <p>Monthly 30-minute feedback calls and early access to conceptual designs.</p>
+          </div>
+          <div class="shape__tier-section">
+            <h4>Perks</h4>
+            <ul>
+              <li>Lifetime "Founding Member" status</li>
+              <li>Direct influence on the roadmap</li>
+              <li>Premium features free for life</li>
+            </ul>
+          </div>
+          <a href="#waitlist" class="btn btn--primary shape__tier-btn" onclick="document.getElementById('role').value='strategist'">Apply as Strategist</a>
+        </div>
+
+        <!-- Tier 2: The Beta Testers -->
+        <div class="shape__tier shape__tier--beta reveal">
+          <div class="shape__tier-badge">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="shape__tier-title">The Beta Testers</h3>
+          <p class="shape__tier-for">For the Early Adopters</p>
+          <p class="shape__tier-desc">Be the first to use the Juno platform in your daily practice and help us iron out the kinks.</p>
+          <div class="shape__tier-section">
+            <h4>Commitment</h4>
+            <p>Use the app with your patients and report bugs or usability issues.</p>
+          </div>
+          <div class="shape__tier-section">
+            <h4>Perks</h4>
+            <ul>
+              <li>Free access during the beta period</li>
+              <li>50% discount on your first year's subscription</li>
+            </ul>
+          </div>
+          <a href="#waitlist" class="btn btn--primary shape__tier-btn" onclick="document.getElementById('role').value='beta_tester'">Join as Beta Tester</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- STATS DIVIDER -->
@@ -254,7 +333,7 @@
             <div class="team__init" style="display:none">AH</div>
           </div>
           <h3 class="team__name">Anna Holtkamp</h3>
-          <p class="team__role">Developer</p>
+          <p class="team__role">Head of Research</p>
           <div class="team__line"></div>
         </div>
         <div class="team__card" style="--delay:.6s">
@@ -305,16 +384,32 @@
             </svg>
           </div>
           <div class="quotes__sparkles"></div>
-          <p>"I lose hours every week figuring out routes and reorganizing visits when plans change. I hope Juno's route planning saves me about 4 hours a week."</p>
+          <p>"I want to apply as a test midwife and actively contribute to the development of this product. Being a pilot user means I can shape a tool that truly fits my daily practice — and that excites me."</p>
           <footer>
-            <div class="quotes__avatar">EK</div>
+            <div class="quotes__avatar">LW</div>
             <div class="quotes__author">
-              <strong>Emma K.</strong>
-              <span>Community Midwife, Berlin-Neukölln</span>
+              <strong>Lena W.</strong>
+              <span>Freelance Midwife, Berlin-Charlottenburg</span>
             </div>
           </footer>
         </blockquote>
-        <blockquote class="quotes__card quotes__card--lavender reveal" style="--delay:.3s">
+        <blockquote class="quotes__card quotes__card--gold reveal" style="--delay:.3s">
+          <div class="quotes__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+          </div>
+          <div class="quotes__sparkles"></div>
+          <p>"I want to share the real challenges I face every day — the scheduling chaos, the paperwork overload — so that they can be considered and built right into the product. Our voices need to be in this tool."</p>
+          <footer>
+            <div class="quotes__avatar">KH</div>
+            <div class="quotes__author">
+              <strong>Katharina H.</strong>
+              <span>Community Midwife, Hamburg-Altona</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="quotes__card quotes__card--lavender reveal" style="--delay:.45s">
           <div class="quotes__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
@@ -375,6 +470,12 @@
             <input id="email" name="email" type="email" placeholder="jane@practice.com" required />
             <label for="location">Practice Location</label>
             <input id="location" name="location" type="text" placeholder="Berlin-Neukölln" />
+            <label for="role">I'd like to join as</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Choose your role…</option>
+              <option value="strategist">Strategist — Feedback &amp; Vision</option>
+              <option value="beta_tester">Beta Tester — Early Adopter</option>
+            </select>
             <button class="btn btn--primary btn--full" type="submit">Send My Details</button>
             <p class="form__note">🔒 Your data is safe. We never share your information.</p>
             <p class="form__msg" aria-live="polite"></p>

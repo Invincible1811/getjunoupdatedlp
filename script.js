@@ -231,6 +231,7 @@
     let color = "#E8A0A6";
     if (card.classList.contains("quotes__card--teal")) color = "#64C8BE";
     if (card.classList.contains("quotes__card--lavender")) color = "#A08CD2";
+    if (card.classList.contains("quotes__card--gold")) color = "#D4A574";
 
     sparkle.style.cssText = `
       position: absolute;
@@ -250,6 +251,23 @@
     setTimeout(() => sparkle.remove(), 1200);
   }
 
+  // Language toggle
+  function setupLangToggle() {
+    const btn = document.getElementById('langToggle');
+    if (!btn) return;
+
+    const options = btn.querySelectorAll('.nav__lang-option');
+
+    btn.addEventListener('click', () => {
+      options.forEach(opt => opt.classList.toggle('nav__lang-option--active'));
+      const activeLang = btn.querySelector('.nav__lang-option--active');
+      if (activeLang) {
+        const lang = activeLang.getAttribute('data-lang');
+        document.documentElement.setAttribute('lang', lang);
+      }
+    });
+  }
+
   // Initialize
   function init() {
     setupNav();
@@ -261,6 +279,7 @@
     setupHeroParallax();
     setupHeroMouse();
     setupQuoteSparkles();
+    setupLangToggle();
   }
 
   if (document.readyState === "loading") {
