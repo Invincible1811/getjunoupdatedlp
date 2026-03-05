@@ -48,6 +48,9 @@
         <span class="hero__float hero__float--4" data-i18n="hero.float4">Nächste Woche koordinieren</span>
         <span class="hero__float hero__float--5" data-i18n="hero.float5">Umplanungen am Wochenende</span>
 
+        <!-- Eyebrow -->
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Built for Midwives</p>
+
         <!-- Main heading -->
         <h1 class="hero__main-heading" data-i18n-html="hero.heading">Und, wenn Dich jemand dabei<br>unterstützen könnte?</h1>
 
@@ -177,7 +180,7 @@
     </svg>
   </section>
 
-  <!-- SHAPE THE FUTURE — Volunteer Tiers -->
+  <!-- SHAPE THE FUTURE + CONTACT — Combined -->
   <section class="shape" id="shape">
     <div class="wrap">
       <div class="shape__header reveal">
@@ -186,7 +189,34 @@
         <p class="shape__text" data-i18n="shape.text">Whether you love shaping ideas or testing new tools, there's a place for you in the Juno community. Pick the role that fits your style and help us build something amazing together.</p>
       </div>
 
-      <div class="shape__tiers">
+      <div class="shape__combined" id="waitlist">
+        <!-- Contact Form -->
+        <div class="contact__inner reveal">
+          <h2 class="contact__heading" data-i18n="contact.heading">Get Contact</h2>
+
+          <form class="contact__form" action="https://formsubmit.co/jannik.fuchs@code.berlin" method="POST" autocomplete="on">
+            <input type="hidden" name="_subject" value="New Juno Contact" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://getjuno.de" />
+
+            <label class="contact__label" for="role" data-i18n="contact.roleLabel">What describes you best?</label>
+            <select class="contact__select" id="role" name="role" required>
+              <option value="" disabled selected>Search</option>
+              <option value="beta_tester">Beta Tester</option>
+              <option value="strategist">Strategist</option>
+            </select>
+
+            <input class="contact__input" id="firstName" name="firstName" type="text" placeholder="Name" required />
+            <input class="contact__input" id="surname" name="surname" type="text" placeholder="Surname" required />
+            <input class="contact__input" id="email" name="email" type="email" placeholder="Email" required />
+
+            <label class="contact__label" for="message" data-i18n="contact.msgLabel">Message</label>
+            <textarea class="contact__textarea" id="message" name="message" placeholder="Say something..." rows="4"></textarea>
+
+            <button class="contact__btn" type="submit" data-i18n="contact.btn">Get Contact With Us!</button>
+          </form>
+        </div>
+
         <!-- Tier 1: The Strategists -->
         <div class="shape__tier shape__tier--strategist reveal">
           <div class="shape__tier-badge">
@@ -233,44 +263,9 @@
         </div>
       </div>
     </div>
-    <!-- Wave: Shape → CTA -->
+    <!-- Wave: Shape → Team -->
     <svg class="wave wave--shape" viewBox="0 0 1440 100" preserveAspectRatio="none">
       <path d="M0,50 C360,90 720,10 1080,50 C1260,70 1380,40 1440,55 L1440,100 L0,100 Z" />
-    </svg>
-  </section>
-
-  <!-- GET CONTACT -->
-  <section class="contact" id="waitlist">
-    <div class="wrap">
-      <div class="contact__inner reveal">
-        <h2 class="contact__heading" data-i18n="contact.heading">Get Contact</h2>
-
-        <form class="contact__form" action="https://formsubmit.co/jannik.fuchs@code.berlin" method="POST" autocomplete="on">
-          <input type="hidden" name="_subject" value="New Juno Contact" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://getjuno.de" />
-
-          <label class="contact__label" for="role" data-i18n="contact.roleLabel">What describes you best?</label>
-          <select class="contact__select" id="role" name="role" required>
-            <option value="" disabled selected>Search</option>
-            <option value="beta_tester">Beta Tester</option>
-            <option value="strategist">Strategist</option>
-          </select>
-
-          <input class="contact__input" id="firstName" name="firstName" type="text" placeholder="Name" required />
-          <input class="contact__input" id="surname" name="surname" type="text" placeholder="Surname" required />
-          <input class="contact__input" id="email" name="email" type="email" placeholder="Email" required />
-
-          <label class="contact__label" for="message" data-i18n="contact.msgLabel">Message</label>
-          <textarea class="contact__textarea" id="message" name="message" placeholder="Say something..." rows="4"></textarea>
-
-          <button class="contact__btn" type="submit" data-i18n="contact.btn">Get Contact With Us!</button>
-        </form>
-      </div>
-    </div>
-    <!-- Wave: Contact → Team -->
-    <svg class="wave wave--cta" viewBox="0 0 1440 80" preserveAspectRatio="none">
-      <path d="M0,30 C480,80 960,10 1440,40 L1440,80 L0,80 Z" />
     </svg>
   </section>
 
