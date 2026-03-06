@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-primary: #394835;
+  --color-primary-light: #899e82;
+  --color-text-gray: #606266;
+  --color-text-dark: #444444;
+  --color-border-light: rgba(217, 217, 217, 0.6);
+  --font-sans: var(--font-poppins);
+  --font-manrope: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Button gradient */
+.btn-primary {
+  background: linear-gradient(179.35deg, #9db496 2.43%, #899e82 185.58%);
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(179.35deg, #899e82 2.43%, #768f6e 185.58%);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #98CBFF;
+  outline-offset: 2px;
+}
+
+/* Hero gradient backgrounds */
+.hero-gradient-pink {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.302) 0%,
+    rgba(240, 242, 246, 0.2) 10%,
+    rgba(238, 195, 189, 0.2) 26.34%,
+    rgba(238, 195, 189, 0.2) 75%,
+    rgba(240, 242, 246, 0.2) 90%,
+    rgba(255, 255, 255, 0.302) 100%
+  );
+}
+
+.hero-gradient-green {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.302) 0%,
+    rgba(240, 242, 246, 0.3) 10%,
+    rgba(172, 196, 164, 0.2) 22.12%,
+    rgba(172, 196, 164, 0.2) 75%,
+    rgba(240, 242, 246, 0.3) 90%,
+    rgba(255, 255, 255, 0.302) 100%
+  );
+}
+
+/* Feature card — beveled bottom-right corner matching Figma */
+.feature-card-wrapper {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card-wrapper:hover {
+  transform: translateY(-2px);
+}
+.feature-card {
+  background: white;
+  border: 1px solid #E9E9E9;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45px), calc(100% - 48px) 100%, 0 100%);
+}
