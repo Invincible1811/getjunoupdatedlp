@@ -18,7 +18,7 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" className="relative h-10 w-[150px] shrink-0">
+        <Link href="/" className="relative h-32 w-[380px] shrink-0">
           <Image
             src={logoSrc}
             alt="JUNO Logo"
