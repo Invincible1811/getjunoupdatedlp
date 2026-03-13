@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const teamMembers: {
   name: string;
@@ -7,52 +11,52 @@ const teamMembers: {
   objectPos: string;
 }[] = [
   {
-    name: "Jannik Fuchs",
-    role: "Project Owner",
+    name: "Jannik",
+    role: "Produkt",
     image: "/assets/juno/Jannik.png",
     objectPos: "center top",
   },
   {
-    name: "Anna Holtkamp",
-    role: "Head of Research",
+    name: "Anna",
+    role: "Forschung",
     image: "/assets/juno/Anna.png",
     objectPos: "center 10%",
   },
   {
-    name: "Sandra Mavunga",
+    name: "Sandra",
     role: "Scrum Master",
     image: "/assets/juno/Sandra.png",
     objectPos: "center 8%",
   },
   {
-    name: "Julian Bartsch",
-    role: "Developer",
-    image: null,
-    objectPos: "center center",
+    name: "Julian",
+    role: "Entwickler",
+    image: "/assets/juno/Julian.png",
+    objectPos: "center 5%",
   },
   {
-    name: "Murat Can Koçyiğit",
-    role: "Developer",
+    name: "Can",
+    role: "Entwickler",
     image: "/assets/juno/Can.png",
     objectPos: "center 2%",
   },
   {
-    name: "Daniel Kang",
-    role: "Developer",
+    name: "Daniel",
+    role: "Entwickler",
     image: "/assets/juno/Daniel.png",
     objectPos: "center 15%",
   },
   {
-    name: "Bernard Barnieh",
-    role: "Developer",
+    name: "Bernard",
+    role: "Entwickler",
     image: "/assets/juno/Bernard.png",
     objectPos: "center 10%",
   },
   {
-    name: "Tarek Bder",
-    role: "Developer",
-    image: null,
-    objectPos: "center center",
+    name: "Tarek",
+    role: "Entwickler",
+    image: "/assets/juno/Tarek.png",
+    objectPos: "center 10%",
   },
 ];
 
@@ -60,6 +64,7 @@ const decorativeSparkle = "/assets/juno/decorative-sparkle.png";
 const decorativeStarLg = "/assets/juno/decorative-star-lg.png";
 
 export default function OurTeam() {
+  const { t } = useLanguage();
   return (
     <section
       id="team"
@@ -69,23 +74,20 @@ export default function OurTeam() {
         {/* Section Header */}
         <div className="relative flex flex-col gap-1 items-start w-full mb-2.5">
           <h2 className="text-[32px] md:text-[48px] lg:text-[66px] font-semibold text-text-dark leading-normal tracking-[0.64px] text-center w-full">
-            Our Team
+            {t(translations.ourTeam.heading)}
           </h2>
           <p className="text-[24px] md:text-[32px] font-bold text-[#899e82] leading-normal text-center w-full">
-            Meet the Minds Behind Juno
-          </p>
-          <p className="text-[16px] md:text-[21px] font-semibold text-text-gray leading-normal text-center w-full">
-            Passionate professionals dedicated to transforming midwifery care
+            {t(translations.ourTeam.subtitle)}
           </p>
 
           {/* Decorative sparkle — near heading */}
-          <div className="hidden lg:block absolute left-[calc(50%-231px)] top-[31px] w-[73px] h-[73px] rotate-[18deg]" aria-hidden="true">
+          <div className="hidden lg:block absolute left-[calc(50%-260px)] top-[35px] w-[73px] h-[73px] rotate-[18deg]" aria-hidden="true">
             <Image src={decorativeSparkle} alt="" width={73} height={73} className="object-contain" />
           </div>
         </div>
 
         {/* Decorative star — top right */}
-        <div className="hidden lg:block absolute left-[calc(50%+200px)] top-[-10px] w-[134px] h-[134px] rotate-[35deg] z-20" aria-hidden="true">
+        <div className="hidden lg:block absolute left-[calc(50%+132px)] top-[-40px] w-[134px] h-[134px] rotate-[35deg] z-20" aria-hidden="true">
           <Image src={decorativeStarLg} alt="" width={134} height={134} className="object-contain" />
         </div>
 
@@ -120,7 +122,7 @@ export default function OurTeam() {
                   {member.name}
                 </p>
                 <p className="text-[16px] font-medium text-[#899e82] text-center whitespace-nowrap leading-normal">
-                  {member.role}
+                  {t(translations.ourTeam.roles[member.name])}
                 </p>
               </div>
             </article>

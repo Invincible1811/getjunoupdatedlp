@@ -1,52 +1,56 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/lib/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const features = [
   {
     badge: "/assets/juno/feature-badge-calendar.svg",
     icon: "/assets/juno/feature-icon-calendar.svg",
-    title: "Your Optimized Calendar",
+    title: "Hebammen Kalender",
     description:
-      "Managing home visits, clinic hours, and birth windows is a logistical puzzle. Juno solves it automatically.",
+      "Hausbesuche, Schichten und Pausen – alles in einem Kalender.\nMit deiner Route verknüpft und speziell für den Arbeitsalltag von Hebammen entwickelt.",
     iconSize: 36,
   },
   {
     badge: "/assets/juno/feature-badge-communication.svg",
     icon: "/assets/juno/feature-icon-communication.svg",
-    title: "Seamless Communication",
+    title: "Automatisierte Kommunikation",
     description:
-      "Connect without the burnout. Midwifery is personal, but your private life is precious. Juno centralizes all your patient interactions into one professional hub.",
+      "Sende Termine, Absagen und Verspätungen direkt aus deiner Terminplanung.\nDeine Patientinnen werden automatisch informiert – ohne zusätzlichen Kommunikationsaufwand.",
     iconSize: 40,
   },
   {
     badge: "/assets/juno/feature-badge-diary.svg",
     icon: "/assets/juno/feature-icon-diary.svg",
-    title: "Digital Diary",
+    title: "Patientinnenübersicht",
     description:
-      "A holistic view of every journey. Every pregnancy is a story. Juno\u2019s digital profile gives you a 360-degree view of the mother\u2019s health and progress.",
+      "Alle wichtigen Informationen zu jeder Patientin auf einen Blick.\nGeburtstermine, Entlassungen, To-dos und der Fortschritt jeder Mutter sind im digitalen JUNO-Profil übersichtlich gebündelt.",
     iconSize: 36,
   },
   {
     badge: "/assets/juno/feature-badge-routes.svg",
     icon: "/assets/juno/feature-icon-routes.svg",
-    title: "Optimize Your Home Visit Routes",
+    title: "Optimiere deine Routen",
     description:
-      "Juno plans appointments by location to minimize your travel time.",
+      "Optimierte Routen für deine Hausbesuche. JUNO minimiert deine Fahrtwege und plant die beste Route basierend auf den Verfügbarkeiten deiner Patientinnen – direkt in deiner Terminplanung.",
     iconSize: 32,
   },
   {
     badge: "/assets/juno/feature-badge-practice.svg",
     icon: "/assets/juno/feature-icon-practice.svg",
-    title: "Your Practice at a Glance",
+    title: "Deine Leistungen auf einen Blick",
     description:
-      "Track your visits and patient capacity in real-time to manage your workload without the stress. See your projected revenue and billing status at a glance, replacing messy spreadsheets with instant financial clarity.",
+      "Hausbesuche und Kapazität in Echtzeit im Blick. Umsatz und gefahrene Kilometer werden automatisch erfasst und lassen sich mit einem Klick für die Abrechnung exportieren.",
     iconSize: 35,
   },
   {
     badge: "/assets/juno/feature-badge-circle.svg",
     icon: "/assets/juno/feature-icon-circle.svg",
-    title: "The Midwife Circle",
+    title: "Vertretungsplanung",
     description:
-      "Connect with a community of peers to share clinical experiences, solve common practice hurdles, and discuss industry trends. Gain valuable insights from collective wisdom and navigate the challenges of independent midwifery alongside a supportive professional network.",
+      "Vernetze dich mit Hebammen in deiner Umgebung. Finde schnell Unterstützung bei Vertretungen und tausche dich zu Fragen im Berufsalltag aus.",
     iconSize: 36,
   },
 ];
@@ -54,6 +58,7 @@ const features = [
 const decorativeImg161 = "/assets/juno/decorative-star.png";
 
 export default function Features() {
+  const { t } = useLanguage();
   return (
     <section id="features" className="relative w-full py-16 md:py-24 lg:py-32">
       {/* Background gradient */}
@@ -63,22 +68,16 @@ export default function Features() {
         {/* Section Header */}
         <div className="relative mb-8 md:mb-12 flex flex-col gap-2.5">
           <h2 className="text-[36px] md:text-[48px] lg:text-[66px] font-semibold text-text-dark leading-normal tracking-[0.64px]">
-            Features
+            {t(translations.features.heading).slice(0, -1)}<span className="relative inline-block">{t(translations.features.heading).slice(-1)}<span className="hidden lg:block absolute -top-[35px] -left-[20px] w-[90px] h-[90px] pointer-events-none" aria-hidden="true"><Image src={decorativeImg161} alt="" width={90} height={90} className="object-contain rotate-[30deg]" /></span></span>
           </h2>
-          <p className="text-[16px] md:text-[18px] lg:text-[20px] font-medium text-text-gray leading-[1.4] lg:w-[1114px]">
-            <span className="text-[#101011]">JUNO</span> ist Deine intelligente
-            Assistenz — gemeinsam entwickelt und abgestimmt auf{" "}
-            <span className="text-[#101011]">Deinen</span> Betreuungsalltag.
+          <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#101011] leading-[1.4] lg:w-[1114px]">
+            {t(translations.features.subtitle)}
           </p>
-          {/* Decorative image */}
-          <div className="hidden lg:block absolute left-[215px] top-[-52px] w-[110px] h-[110px] rotate-[30deg]" aria-hidden="true">
-            <Image src={decorativeImg161} alt="" width={110} height={110} className="object-contain" />
-          </div>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 py-5">
-          {features.map((feature) => (
+          {features.map((feature, i) => (
             <div key={feature.title} className="feature-card-wrapper">
             {/* Icon badge — overlaps top edge of card like a sticker */}
             <div className="absolute left-[36px] top-0 w-[76px] h-[80px] z-10" aria-hidden="true">
@@ -110,11 +109,11 @@ export default function Features() {
               <div className="pl-[36px] pr-[36px] pb-[30px] pt-[59px]">
                 <h3 className="font-[var(--font-manrope)] text-[18px] font-extrabold text-text-dark leading-normal mb-2.5"
                     style={{ fontFamily: "var(--font-manrope)" }}>
-                  {feature.title}
+                  {t(translations.features.items[i].title)}
                 </h3>
                 <p className="font-medium text-[16px] text-text-gray leading-[30px] tracking-[-0.32px] w-[293px] max-w-full"
                    style={{ fontFamily: "var(--font-manrope)" }}>
-                  {feature.description}
+                  {t(translations.features.items[i].desc)}
                 </p>
               </div>
             </article>

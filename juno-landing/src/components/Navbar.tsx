@@ -1,16 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/lib/LanguageContext";
+import { translations } from "@/lib/translations";
 
 const logoSrc = "/assets/juno/logo.png";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Features", href: "#features" },
-  { label: "Team", href: "#team" },
-  { label: "Contact", href: "#contact" },
-];
-
 export default function Navbar() {
+  const { locale, toggleLocale, t } = useLanguage();
+
+  const navLinks = [
+    { label: t(translations.nav.about), href: "#about" },
+    { label: t(translations.nav.features), href: "#features" },
+    { label: t(translations.nav.team), href: "#team" },
+    { label: t(translations.nav.contact), href: "#contact" },
+  ];
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border-light backdrop-blur-[6px] bg-white/70">
       <nav
@@ -23,7 +28,7 @@ export default function Navbar() {
             src={logoSrc}
             alt="JUNO Logo"
             fill
-            className="object-contain object-left"
+            className="object-contain object-left logo-animated"
             priority
           />
         </Link>
@@ -32,23 +37,35 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <Link
+              <a
                 href={link.href}
                 className="text-[18px] font-medium text-text-dark hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
               >
                 {link.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <Link
-          href="#contact"
-          className="btn-primary hidden md:inline-flex items-center justify-center h-[50px] rounded-2xl px-5 py-2.5 text-[14px] font-medium text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
-        >
-          Join Waitlist
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLocale}
+            className="flex items-center gap-1.5 h-[40px] rounded-xl px-3 py-1.5 text-[14px] font-medium text-text-dark border border-border-light hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
+            aria-label={locale === "de" ? "Switch to English" : "Auf Deutsch wechseln"}
+          >
+            <span className="text-[16px]">{locale === "de" ? "🇬🇧" : "🇩🇪"}</span>
+            {locale === "de" ? "EN" : "DE"}
+          </button>
+
+          {/* CTA Button */}
+          <a
+            href="#contact"
+            className="btn-primary inline-flex items-center justify-center h-[50px] rounded-2xl px-5 py-2.5 text-[14px] font-medium text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
+          >
+            {t(translations.nav.cta)}
+          </a>
+        </div>
 
         {/* Mobile Menu Button */}
         <button

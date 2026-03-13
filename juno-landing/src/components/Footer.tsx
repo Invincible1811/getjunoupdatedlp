@@ -1,24 +1,29 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/lib/LanguageContext";
+import { translations } from "@/lib/translations";
+import ImpressumModal from "./ImpressumModal";
+import DatenschutzModal from "./DatenschutzModal";
 
 const footerBg = "/assets/juno/footer-bg.webp";
-const facebookIcon = "/assets/juno/icon-facebook.svg";
-const whatsappIcon = "/assets/juno/icon-whatsapp.svg";
-const instagramIcon = "/assets/juno/icon-instagram.svg";
 
-const footerLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Waitlist", href: "#contact" },
-  { label: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  { icon: facebookIcon, label: "Facebook", href: "#" },
-  { icon: whatsappIcon, label: "WhatsApp", href: "#" },
-  { icon: instagramIcon, label: "Instagram", href: "#" },
-];
 
 export default function Footer() {
+  const { t } = useLanguage();
+  const [impressumOpen, setImpressumOpen] = useState(false);
+  const [datenschutzOpen, setDatenschutzOpen] = useState(false);
+
+  const footerLinks = [
+    { label: t(translations.footer.features), href: "#features" },
+    { label: t(translations.footer.access), href: "#contact" },
+    { label: t(translations.footer.contact), href: "#contact" },
+    { label: t(translations.footer.impressum), href: "#impressum", isModal: "impressum" },
+    { label: t(translations.footer.datenschutz), href: "#datenschutz", isModal: "datenschutz" },
+  ];
+
   return (
     <footer className="relative w-full min-h-[500px] lg:min-h-[600px] flex flex-col items-start justify-between overflow-hidden">
       {/* Background */}
@@ -39,7 +44,7 @@ export default function Footer() {
         <div className="flex flex-1 flex-col items-center justify-center gap-10">
           {/* Brand */}
           <p className="text-[32px] md:text-[40px] lg:text-[48px] font-medium text-white text-center">
-            getjuno.de
+            getJUNO.de
           </p>
 
           {/* Nav links */}
@@ -47,45 +52,41 @@ export default function Footer() {
             <ul className="flex items-center gap-5">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-[18px] md:text-[24px] font-medium text-white hover:text-white/80 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
-                  >
-                    {link.label}
-                  </Link>
+                  {(link as { isModal?: string }).isModal ? (
+                    <button
+                      onClick={() =>
+                        (link as { isModal?: string }).isModal === "impressum"
+                          ? setImpressumOpen(true)
+                          : setDatenschutzOpen(true)
+                      }
+                      className="text-[18px] md:text-[24px] font-medium text-white hover:text-white/80 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-[18px] md:text-[24px] font-medium text-white hover:text-white/80 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF]"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Social icons */}
-          <div className="flex items-center gap-5 p-2.5">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="relative w-9 h-9 hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98CBFF] rounded-full"
-              >
-                <Image
-                  src={social.icon}
-                  alt=""
-                  width={36}
-                  height={36}
-                  aria-hidden="true"
-                />
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 
       {/* Copyright bar */}
       <div className="relative z-10 w-full flex items-center justify-center px-[45px] py-[19px]">
         <p className="text-[16px] md:text-[24px] font-medium text-white text-center">
-          © 2026 Juno Digital Assistant. All rights reserved.
+          {t(translations.footer.copyright)}
         </p>
       </div>
+      <ImpressumModal isOpen={impressumOpen} onClose={() => setImpressumOpen(false)} />
+      <DatenschutzModal isOpen={datenschutzOpen} onClose={() => setDatenschutzOpen(false)} />
     </footer>
   );
 }
