@@ -15,4 +15,4 @@ Juno is a field-first tool for midwives and community care teams. It supports **
 ## Team
 - **Product Owner (PO):** Jannik Fuchs  
 - **Scrum Master (SM):** Sandra  
-- **Developers:** Bernard, Julian, Can, Anna, Tarek
+- **Developers:** Bernard, Julian, Can, Anna, Tarek, Daniel
