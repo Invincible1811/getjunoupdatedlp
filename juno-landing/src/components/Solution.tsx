@@ -56,7 +56,7 @@ export default function Solution() {
                       src={block.image}
                       alt={t(block.alt)}
                       fill
-                      className="object-contain rounded-[28px]"
+                      className="object-contain rounded-[42px]"
                       style={{
                         boxShadow: "0 2px 4px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.09), 0 28px 64px rgba(0,0,0,.14)",
                       }}

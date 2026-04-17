@@ -22,7 +22,7 @@ export default function Problem() {
         <div className="absolute inset-0 bg-black/10" />
       </div>
       <div className="relative z-10 mx-auto max-w-[860px] px-6 md:px-10">
-        <span className="block text-[11px] font-bold tracking-[0.14em] uppercase mb-4" style={{ color: "#F2B13E" }}>
+        <span className="block text-[16px] font-bold tracking-[0.14em] uppercase mb-4" style={{ color: "#F2B13E" }}>
           {t(translations.problem.label)}
         </span>
         <h2 className="text-[28px] md:text-[36px] lg:text-[44px] font-bold text-white leading-[1.15] tracking-tight mb-12">

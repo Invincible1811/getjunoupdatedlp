@@ -665,7 +665,7 @@ function Problem() {
                 className: "relative z-10 mx-auto max-w-[860px] px-6 md:px-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "block text-[11px] font-bold tracking-[0.14em] uppercase mb-4",
+                        className: "block text-[16px] font-bold tracking-[0.14em] uppercase mb-4",
                         style: {
                             color: "#F2B13E"
                         },
@@ -883,7 +883,7 @@ function Solution() {
                                             src: block.image,
                                             alt: t(block.alt),
                                             fill: true,
-                                            className: "object-contain rounded-[28px]",
+                                            className: "object-contain rounded-[42px]",
                                             style: {
                                                 boxShadow: "0 2px 4px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.09), 0 28px 64px rgba(0,0,0,.14)"
                                             }
@@ -1236,207 +1236,104 @@ __turbopack_context__.s([
     ()=>ImpressumModal
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 "use client";
 ;
-;
 function ImpressumModal({ isOpen, onClose }) {
-    const dialogRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const dialog = dialogRef.current;
-        if (!dialog) return;
-        if (isOpen) {
-            dialog.showModal();
-            document.body.style.overflow = "hidden";
-        } else {
-            dialog.close();
-            document.body.style.overflow = "";
-        }
-        return ()=>{
-            document.body.style.overflow = "";
-        };
-    }, [
-        isOpen
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const handleKeyDown = (e)=>{
-            if (e.key === "Escape") onClose();
-        };
-        if (isOpen) window.addEventListener("keydown", handleKeyDown);
-        return ()=>window.removeEventListener("keydown", handleKeyDown);
-    }, [
-        isOpen,
-        onClose
-    ]);
     if (!isOpen) return null;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("dialog", {
-        ref: dialogRef,
-        className: "fixed inset-0 z-50 m-0 h-full w-full max-h-full max-w-full bg-black/60 backdrop-blur-sm p-0 open:flex items-center justify-center",
-        onClick: (e)=>{
-            if (e.target === dialogRef.current) onClose();
-        },
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60",
+        onClick: onClose,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative bg-white rounded-xl max-w-[700px] w-[90%] max-h-[80vh] overflow-y-auto mx-auto my-auto p-8 md:p-10 shadow-2xl",
+            className: "bg-white rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8",
+            onClick: (e)=>e.stopPropagation(),
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: onClose,
-                    className: "absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-800 transition-colors text-xl font-bold",
-                    "aria-label": "Schließen",
-                    children: "✕"
-                }, void 0, false, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center justify-between mb-6",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-xl font-bold text-[#1A1208]",
+                            children: "Impressum"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: onClose,
+                            className: "text-[#6B5F4A] hover:text-[#1A1208] text-2xl leading-none",
+                            children: "×"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 50,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-[32px] md:text-[40px] font-semibold text-[#111b2b] mb-6",
-                    children: "Impressum"
-                }, void 0, false, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-[15px] text-[#6B5F4A] leading-relaxed space-y-3",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                children: "Angaben gemäß § 5 TMG"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ImpressumModal.tsx",
+                                lineNumber: 18,
+                                columnNumber: 14
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: "JUNO – Universitätsprojekt"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: [
+                                "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                    fileName: "[project]/src/components/ImpressumModal.tsx",
+                                    lineNumber: 20,
+                                    columnNumber: 66
+                                }, this),
+                                "Das JUNO-Team"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-[13px] text-[#999]",
+                            children: "Diese Website dient zu Informationszwecken im Rahmen eines Universitätsprojekts."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/ImpressumModal.tsx",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 58,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 62,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "Verantwortlich für den Inhalt dieser Website:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 66,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4 whitespace-pre-line",
-                    children: `JUNO
-ein studentisches Projekt an der CODE University of Applied Sciences
-Donaustr. 44
-12043 Berlin, Deutschland
-E-Mail: info@getjuno.de`
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 69,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "Projektbeschreibung"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 77,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Diese Website ist Teil eines studentischen Projekts im Rahmen eines Hochschulseminars an der CODE University of Applied Sciences."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 80,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Im Rahmen des Projekts wird der Prozess der Entwicklung und Validierung einer Startup-Idee simuliert."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 83,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Die auf dieser Website dargestellte Anwendung sowie die angebotenen Inhalte dienen ausschließlich zu Lehr- und Forschungszwecken im Rahmen des Studienprojekts. Es handelt sich nicht um ein kommerzielles Angebot und es werden keine kostenpflichtigen Dienstleistungen angeboten."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 86,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 90,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-1",
-                    children: "JUNO – ein studentisches Projekt an der CODE University of Applied Sciences"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 93,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Anschrift wie oben"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 96,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "Haftung für Inhalte"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 100,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 103,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Als Diensteanbieter sind wir gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht jedoch nicht."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 106,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "Haftung für Links"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 110,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Unsere Website kann Links zu externen Websites Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 113,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68]",
-                    children: "Zum Zeitpunkt der Verlinkung wurden die externen Seiten auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir derartige Links umgehend entfernen."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ImpressumModal.tsx",
-                    lineNumber: 116,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ImpressumModal.tsx",
-            lineNumber: 48,
+            lineNumber: 12,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ImpressumModal.tsx",
-        lineNumber: 41,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
@@ -1449,401 +1346,129 @@ __turbopack_context__.s([
     ()=>DatenschutzModal
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 "use client";
 ;
-;
 function DatenschutzModal({ isOpen, onClose }) {
-    const dialogRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const dialog = dialogRef.current;
-        if (!dialog) return;
-        if (isOpen) {
-            dialog.showModal();
-            document.body.style.overflow = "hidden";
-        } else {
-            dialog.close();
-            document.body.style.overflow = "";
-        }
-        return ()=>{
-            document.body.style.overflow = "";
-        };
-    }, [
-        isOpen
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const handleKeyDown = (e)=>{
-            if (e.key === "Escape") onClose();
-        };
-        if (isOpen) window.addEventListener("keydown", handleKeyDown);
-        return ()=>window.removeEventListener("keydown", handleKeyDown);
-    }, [
-        isOpen,
-        onClose
-    ]);
     if (!isOpen) return null;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("dialog", {
-        ref: dialogRef,
-        className: "fixed inset-0 z-50 m-0 h-full w-full max-h-full max-w-full bg-black/60 backdrop-blur-sm p-0 open:flex items-center justify-center",
-        onClick: (e)=>{
-            if (e.target === dialogRef.current) onClose();
-        },
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60",
+        onClick: onClose,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative bg-white rounded-xl max-w-[700px] w-[90%] max-h-[80vh] overflow-y-auto mx-auto my-auto p-8 md:p-10 shadow-2xl",
+            className: "bg-white rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8",
+            onClick: (e)=>e.stopPropagation(),
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: onClose,
-                    className: "absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-800 transition-colors text-xl font-bold",
-                    "aria-label": "Schließen",
-                    children: "✕"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 50,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-[32px] md:text-[40px] font-semibold text-[#111b2b] mb-6",
-                    children: "Datenschutzerklärung"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 58,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "1. Verantwortlicher"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 63,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Verantwortlich für die Datenverarbeitung auf dieser Website ist:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 66,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2 whitespace-pre-line",
-                    children: `JUNO
-ein studentisches Projekt an der CODE University of Applied Sciences
-Donaustr. 44
-12043 Berlin, Deutschland
-E-Mail: info@getjuno.de`
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 69,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Diese Website wird im Rahmen eines studentischen Projekts an der CODE University of Applied Sciences betrieben."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 76,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "2. Erhebung von Daten beim Besuch der Website"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 81,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Beim Aufruf dieser Website werden durch den Webserver automatisch technische Informationen erfasst. Dazu können insbesondere gehören:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 84,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "text-[14px] text-[#625f68] mb-2 list-disc pl-5",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center justify-between mb-6",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "IP-Adresse des zugreifenden Geräts"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-xl font-bold text-[#1A1208]",
+                            children: "Datenschutzerklärung"
                         }, void 0, false, {
                             fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 88,
+                            lineNumber: 14,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Datum und Uhrzeit des Zugriffs"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: onClose,
+                            className: "text-[#6B5F4A] hover:text-[#1A1208] text-2xl leading-none",
+                            children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 89,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "aufgerufene Seiten"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 90,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Browsertyp und Betriebssystem"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 91,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 87,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Diese Daten werden verarbeitet, um den technischen Betrieb und die Sicherheit der Website zu gewährleisten."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 93,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 96,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "3. Newsletter-Anmeldung"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 101,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Auf unserer Website können Sie sich für unseren Newsletter anmelden. Dabei werden folgende personenbezogene Daten verarbeitet:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 104,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "text-[14px] text-[#625f68] mb-2 list-disc pl-5",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-[15px] text-[#6B5F4A] leading-relaxed space-y-3",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Vorname"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                children: "Datenschutz"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/DatenschutzModal.tsx",
+                                lineNumber: 18,
+                                columnNumber: 14
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 108,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Nachname"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: "Diese Website erhebt keine personenbezogenen Daten, außer bei freiwilliger Angabe im Early-Access-Formular."
                         }, void 0, false, {
                             fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 109,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "E-Mail-Adresse"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                children: "Erhobene Daten"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/DatenschutzModal.tsx",
+                                lineNumber: 20,
+                                columnNumber: 14
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 110,
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: "Bei der Anmeldung zum Early Access wird Ihre E-Mail-Adresse gespeichert, um Sie über den Start von JUNO zu informieren."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/DatenschutzModal.tsx",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                children: "Weitergabe von Daten"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/DatenschutzModal.tsx",
+                                lineNumber: 22,
+                                columnNumber: 14
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/DatenschutzModal.tsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: "Ihre Daten werden nicht an Dritte weitergegeben."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/DatenschutzModal.tsx",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-[13px] text-[#999]",
+                            children: "Diese Website dient zu Informationszwecken im Rahmen eines Universitätsprojekts."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/DatenschutzModal.tsx",
+                            lineNumber: 24,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 107,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Die Daten werden verwendet, um Ihnen Informationen über das Projekt und dessen Entwicklung zuzusenden."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 112,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Rechtsgrundlage der Verarbeitung ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 115,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, z. B. durch eine Nachricht an die oben genannte E-Mail-Adresse."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 118,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "4. Kommunikation über WhatsApp"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 123,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Für die Kommunikation mit Interessenten nutzen wir den Messenger-Dienst WhatsApp Messenger."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 126,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Wenn Sie uns über WhatsApp kontaktieren, werden Ihre Telefonnummer sowie die Inhalte der Nachrichten verarbeitet, um Ihre Anfrage zu bearbeiten."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 129,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "WhatsApp wird von der Meta Platforms betrieben. Dabei kann es zur Verarbeitung von Daten auf Servern außerhalb der Europäischen Union kommen."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 132,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Die Nutzung von WhatsApp erfolgt freiwillig. Alternativ können Sie uns jederzeit per E-Mail kontaktieren."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 135,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "5. Speicherdauer"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 140,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-4",
-                    children: "Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erfüllung der jeweiligen Zwecke erforderlich ist oder bis Sie Ihre Einwilligung widerrufen."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 143,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "6. Rechte der betroffenen Personen"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 148,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Sie haben das Recht:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 151,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "text-[14px] text-[#625f68] mb-4 list-disc pl-5",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Auskunft über Ihre gespeicherten Daten zu erhalten (Art. 15 DSGVO)"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 155,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "unrichtige Daten berichtigen zu lassen (Art. 16 DSGVO)"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 156,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "die Löschung Ihrer Daten zu verlangen (Art. 17 DSGVO)"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 157,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "die Verarbeitung einschränken zu lassen (Art. 18 DSGVO)"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 158,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "der Verarbeitung zu widersprechen (Art. 21 DSGVO)"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/DatenschutzModal.tsx",
-                            lineNumber: 159,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 154,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-[16px] font-semibold text-[#111b2b] mb-1",
-                    children: "7. Beschwerderecht"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 163,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-2",
-                    children: "Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 166,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] mb-1",
-                    children: "Zuständige Behörde in Berlin ist:"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 169,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[14px] text-[#625f68] whitespace-pre-line",
-                    children: `Berliner Beauftragte für Datenschutz und Informationsfreiheit
-Friedrichstraße 219
-10969 Berlin
-Deutschland`
-                }, void 0, false, {
-                    fileName: "[project]/src/components/DatenschutzModal.tsx",
-                    lineNumber: 172,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/DatenschutzModal.tsx",
-            lineNumber: 48,
+            lineNumber: 12,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/DatenschutzModal.tsx",
-        lineNumber: 41,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
