@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={`${poppins.variable} ${manrope.variable}`}>
+    <html lang="de" className={`${poppins.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
