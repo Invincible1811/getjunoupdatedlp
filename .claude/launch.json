@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "juno-landing",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd juno-landing && npm run dev"],
+      "port": 3000
+    }
+  ]
+}

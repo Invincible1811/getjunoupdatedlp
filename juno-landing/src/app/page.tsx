@@ -1,10 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
+import Problem from "@/components/Problem";
+import Solution from "@/components/Solution";
 import CTA from "@/components/CTA";
-import OurStory from "@/components/OurStory";
-import OurTeam from "@/components/OurTeam";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,11 +11,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <Problem />
+        <Solution />
         <CTA />
-        <OurStory />
-        <OurTeam />
-        <ContactForm />
       </main>
       <Footer />
     </div>

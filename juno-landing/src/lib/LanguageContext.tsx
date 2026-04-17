@@ -1,27 +1,23 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
-import type { Locale } from "./translations";
+import { createContext, useContext, useState, ReactNode } from "react";
 
-interface LanguageContextType {
+type Locale = "de" | "en";
+type TranslationItem = { de: string; en: string };
+
+interface LanguageContextValue {
   locale: Locale;
   toggleLocale: () => void;
-  t: (entry: { de: string; en: string }) => string;
+  t: (item: TranslationItem) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | null>(null);
+const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("de");
 
-  const toggleLocale = useCallback(() => {
-    setLocale((prev) => (prev === "de" ? "en" : "de"));
-  }, []);
-
-  const t = useCallback(
-    (entry: { de: string; en: string }) => entry[locale],
-    [locale]
-  );
+  const toggleLocale = () => setLocale((l) => (l === "de" ? "en" : "de"));
+  const t = (item: TranslationItem) => item[locale];
 
   return (
     <LanguageContext.Provider value={{ locale, toggleLocale, t }}>

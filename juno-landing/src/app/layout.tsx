@@ -1,37 +1,30 @@
 import type { Metadata } from "next";
 import { Poppins, Manrope } from "next/font/google";
+import { LanguageProvider } from "@/lib/LanguageContext";
 import "./globals.css";
-import Providers from "@/components/Providers";
 
 const poppins = Poppins({
-  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
+  variable: "--font-poppins",
 });
 
 const manrope = Manrope({
-  variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
-  title: "JUNO — Deine intelligente Assistenz für Hebammen",
-  description:
-    "JUNO ist Deine intelligente Assistenz — gemeinsam entwickelt und abgestimmt auf Deinen Betreuungsalltag.",
+  title: "JUNO – Dein digitaler Assistent für Hebammen",
+  description: "JUNO reduziert den administrativen Aufwand, damit du dich auf deine Patientinnen konzentrieren kannst.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
-      <body className={`${poppins.variable} ${manrope.variable} antialiased`}>
-        <Providers>{children}</Providers>
+    <html lang="de" className={`${poppins.variable} ${manrope.variable}`}>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
