@@ -1,0 +1,4 @@
+[00:00:00.838] Server  LOG     ✓ Ready in 508ms
+[00:00:50.040] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/julian/Developer/Claude/getjuno-website/juno-landing/src/app'
+[00:00:50.041] Server  ERROR   ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/Users/julian/Developer/Claude/getjuno-website/juno-landing/src/app'
+[00:00:50.042] Server  ERROR   ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/Users/julian/Developer/Claude/getjuno-website/juno-landing/src/app'

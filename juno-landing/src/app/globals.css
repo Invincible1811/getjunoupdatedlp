@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-primary: #394835;
+  --color-primary-light: #899e82;
+  --color-text-gray: #606266;
+  --color-text-dark: #444444;
+  --color-border-light: rgba(217, 217, 217, 0.6);
+  --font-sans: var(--font-poppins);
+  --font-manrope: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Button gradient */
+.btn-primary {
+  background: linear-gradient(179.35deg, #9db496 2.43%, #899e82 185.58%);
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(179.35deg, #899e82 2.43%, #768f6e 185.58%);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #98CBFF;
+  outline-offset: 2px;
+}
+
+/* Gold Early Access button */
+.btn-gold {
+  background: linear-gradient(179.35deg, #F7C05A 0%, #F2B13E 60%, #E09A25 100%);
+  border: 1px solid #d9962a;
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(179.35deg, #F2B13E 0%, #E09A25 100%);
+}
+
+.btn-gold:focus-visible {
+  outline: 2px solid #98CBFF;
+  outline-offset: 2px;
+}
+
+/* Hero gradient backgrounds */
+.hero-gradient-pink {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.302) 0%,
+    rgba(240, 242, 246, 0.2) 10%,
+    rgba(238, 195, 189, 0.2) 26.34%,
+    rgba(238, 195, 189, 0.2) 75%,
+    rgba(240, 242, 246, 0.2) 90%,
+    rgba(255, 255, 255, 0.302) 100%
+  );
+}
+
+.hero-gradient-green {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.302) 0%,
+    rgba(240, 242, 246, 0.3) 10%,
+    rgba(172, 196, 164, 0.2) 22.12%,
+    rgba(172, 196, 164, 0.2) 75%,
+    rgba(240, 242, 246, 0.3) 90%,
+    rgba(255, 255, 255, 0.302) 100%
+  );
+}
+
+/* Feature card — beveled bottom-right corner matching Figma */
+.feature-card-wrapper {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.feature-card-wrapper:hover {
+  transform: translateY(-2px);
+}
+.feature-card {
+  background: white;
+  border: 1px solid #E9E9E9;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45px), calc(100% - 48px) 100%, 0 100%);
+}
+
+/* JUNO Logo glow animation */
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(137, 158, 130, 0.4)) drop-shadow(0 0 12px rgba(137, 158, 130, 0.15)) brightness(1.05);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(137, 158, 130, 0.6)) drop-shadow(0 0 28px rgba(137, 158, 130, 0.25)) brightness(1.12);
+  }
+}
+
+@keyframes logo-shimmer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo-animated {
+  animation: logo-glow 3s ease-in-out infinite, logo-shimmer 4s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+.logo-animated:hover {
+  filter: drop-shadow(0 0 18px rgba(137, 158, 130, 0.7)) drop-shadow(0 0 36px rgba(238, 195, 189, 0.3)) brightness(1.15);
+  animation-play-state: paused;
+}
