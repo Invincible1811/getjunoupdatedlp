@@ -112,7 +112,7 @@ export default function CTA() {
                   ★★★★★
                 </p>
                 <blockquote className="text-[14px] md:text-[15px] italic leading-[1.6] mb-3" style={{ color: "#F2B13E" }}>
-                  „{t(testimonial.quote)}"
+                  &bdquo;{t(testimonial.quote)}&ldquo;
                 </blockquote>
                 <cite className="text-[12px] not-italic" style={{ color: "rgba(255,255,255,0.3)" }}>
                   {t(testimonial.cite)}

@@ -148,6 +148,132 @@ export const translations = {
       },
     ],
   },
+  ourStory: {
+    name: { de: "Anna", en: "Anna" },
+    role: { de: "Forschung", en: "Research" },
+    heading: { de: "Unsere Geschichte", en: "Our Story" },
+    section1Title: {
+      de: "Wie alles begann",
+      en: "How it all started",
+    },
+    section1Text: {
+      de: "JUNO entstand aus einem echten Problem: Hebammen verbringen zu viel Zeit mit Organisation statt mit ihren Familien. Anna, selbst aus dem Gesundheitsbereich, hat das hautnah erlebt.",
+      en: "JUNO was born from a real problem: midwives spend too much time organizing instead of being with their families. Anna, coming from the healthcare field herself, experienced this firsthand.",
+    },
+    section2Title: {
+      de: "Unsere Mission",
+      en: "Our Mission",
+    },
+    section2Text: {
+      de: "Wir wollen Hebammen den Rücken freihalten – mit einer App, die den Arbeitsalltag so organisiert, dass mehr Zeit für das Wesentliche bleibt: die Betreuung von Müttern und Familien.",
+      en: "We want to free midwives from administrative burden – with an app that organizes daily work so there's more time for what matters most: caring for mothers and families.",
+    },
+    section3Title: {
+      de: "Warum JUNO anders ist",
+      en: "Why JUNO is different",
+    },
+    section3Text: {
+      de: "JUNO wird nicht im stillen Kämmerlein entwickelt, sondern gemeinsam mit Hebammen. Jedes Feature basiert auf echtem Feedback – damit die App wirklich zum Alltag passt.",
+      en: "JUNO isn't developed behind closed doors, but together with midwives. Every feature is based on real feedback – so the app truly fits everyday life.",
+    },
+  },
+  ourTeam: {
+    heading: { de: "Unser Team", en: "Our Team" },
+    subtitle: { de: "Die Menschen hinter JUNO", en: "The people behind JUNO" },
+    roles: {
+      Jannik: { de: "Produkt", en: "Product" },
+      Anna: { de: "Forschung", en: "Research" },
+      Sandra: { de: "Scrum Master", en: "Scrum Master" },
+      Julian: { de: "Entwickler", en: "Developer" },
+      Can: { de: "Entwickler", en: "Developer" },
+      Daniel: { de: "Entwickler", en: "Developer" },
+      Bernard: { de: "Entwickler", en: "Developer" },
+      Tarek: { de: "Entwickler", en: "Developer" },
+    } as Record<string, { de: string; en: string }>,
+  },
+  features: {
+    heading: { de: "Was JUNO für dich tut.", en: "What JUNO does for you." },
+    subtitle: {
+      de: "JUNO wurde speziell für den Arbeitsalltag von Hebammen entwickelt – mit Funktionen, die dir echte Zeit zurückgeben.",
+      en: "JUNO was built specifically for the daily work of midwives – with features that give you real time back.",
+    },
+    items: [
+      {
+        title: { de: "Hebammen Kalender", en: "Midwife Calendar" },
+        desc: {
+          de: "Hausbesuche, Schichten und Pausen – alles in einem Kalender.\nMit deiner Route verknüpft und speziell für den Arbeitsalltag von Hebammen entwickelt.",
+          en: "Home visits, shifts, and breaks – all in one calendar.\nLinked to your route and specially designed for the daily work of midwives.",
+        },
+      },
+      {
+        title: { de: "Automatisierte Kommunikation", en: "Automated Communication" },
+        desc: {
+          de: "Sende Termine, Absagen und Verspätungen direkt aus deiner Terminplanung.\nDeine Patientinnen werden automatisch informiert – ohne zusätzlichen Kommunikationsaufwand.",
+          en: "Send appointments, cancellations, and delays directly from your schedule.\nYour patients are automatically informed – without extra communication effort.",
+        },
+      },
+      {
+        title: { de: "Patientinnenübersicht", en: "Patient Overview" },
+        desc: {
+          de: "Alle wichtigen Informationen zu jeder Patientin auf einen Blick.\nGeburtstermine, Entlassungen, To-dos und der Fortschritt jeder Mutter sind im digitalen JUNO-Profil übersichtlich gebündelt.",
+          en: "All important information about each patient at a glance.\nDue dates, discharges, to-dos, and every mother's progress are clearly bundled in the digital JUNO profile.",
+        },
+      },
+      {
+        title: { de: "Optimiere deine Routen", en: "Optimize Your Routes" },
+        desc: {
+          de: "Optimierte Routen für deine Hausbesuche. JUNO minimiert deine Fahrtwege und plant die beste Route basierend auf den Verfügbarkeiten deiner Patientinnen – direkt in deiner Terminplanung.",
+          en: "Optimized routes for your home visits. JUNO minimizes your driving and plans the best route based on your patients' availability – directly in your schedule.",
+        },
+      },
+      {
+        title: { de: "Deine Leistungen auf einen Blick", en: "Your Services at a Glance" },
+        desc: {
+          de: "Hausbesuche und Kapazität in Echtzeit im Blick. Umsatz und gefahrene Kilometer werden automatisch erfasst und lassen sich mit einem Klick für die Abrechnung exportieren.",
+          en: "Home visits and capacity in real time. Revenue and kilometers driven are automatically tracked and can be exported for billing with one click.",
+        },
+      },
+      {
+        title: { de: "Vertretungsplanung", en: "Substitute Planning" },
+        desc: {
+          de: "Vernetze dich mit Hebammen in deiner Umgebung. Finde schnell Unterstützung bei Vertretungen und tausche dich zu Fragen im Berufsalltag aus.",
+          en: "Connect with midwives in your area. Quickly find support for substitutions and exchange ideas about everyday professional questions.",
+        },
+      },
+    ],
+  },
+  contactForm: {
+    heading: { de: "Kontaktiere uns", en: "Contact Us" },
+    cardTitle: { de: "Early Access Programm", en: "Early Access Program" },
+    cardSubtitle: {
+      de: "Werde Teil unserer ersten Nutzergruppe und gestalte JUNO aktiv mit.",
+      en: "Become part of our first user group and actively shape JUNO.",
+    },
+    engagementLabel: { de: "Dein Engagement", en: "Your Engagement" },
+    engagementText: {
+      de: "Teste JUNO im Alltag und gib uns regelmäßig Feedback – so wird die App genau auf deine Bedürfnisse zugeschnitten.",
+      en: "Test JUNO in your daily routine and give us regular feedback – so the app is tailored exactly to your needs.",
+    },
+    benefitsLabel: { de: "Deine Vorteile", en: "Your Benefits" },
+    benefitsText: {
+      de: "Kostenloser Zugang während der Testphase\nDirekter Draht zum Entwicklerteam\nDeine Wünsche fließen direkt ins Produkt ein",
+      en: "Free access during the test phase\nDirect line to the development team\nYour wishes flow directly into the product",
+    },
+    cardCta: { de: "Jetzt Early Access sichern", en: "Get Early Access Now" },
+    roleLabel: { de: "Deine Rolle", en: "Your Role" },
+    rolePlaceholder: { de: "Bitte auswählen", en: "Please select" },
+    roleOption1: { de: "Hebamme", en: "Midwife" },
+    roleOption2: { de: "Interessiert", en: "Interested" },
+    namePlaceholder: { de: "Vorname", en: "First Name" },
+    surnamePlaceholder: { de: "Nachname", en: "Last Name" },
+    emailPlaceholder: { de: "E-Mail-Adresse", en: "Email Address" },
+    messageLabel: { de: "Nachricht", en: "Message" },
+    messagePlaceholder: {
+      de: "Erzähl uns kurz, warum du JUNO testen möchtest…",
+      en: "Tell us briefly why you'd like to test JUNO…",
+    },
+    submit: { de: "Absenden", en: "Submit" },
+  },
   footer: {
     features: { de: "Funktionen", en: "Features" },
     access: { de: "Early Access", en: "Early Access" },
